@@ -5,9 +5,8 @@ import groovy.transform.Immutable
 import groovy.transform.ToString
 import rest.framework.configuration.api.ApplicationConfiguration
 import rest.framework.configuration.api.UserConfiguration
-import static rest.framework.configuration.impl.SysProperties.BASE_URI
-import static rest.framework.configuration.impl.SysProperties.USER_NAME
-import static rest.framework.configuration.impl.SysProperties.USER_PASSWORD
+
+import static rest.framework.configuration.impl.SysProperties.*
 
 /**
  * @author andrii.ievdokimov
@@ -16,7 +15,7 @@ import static rest.framework.configuration.impl.SysProperties.USER_PASSWORD
 @Immutable
 @EqualsAndHashCode
 @ToString
-class Configuration implements ApplicationConfiguration, UserConfiguration{
+class Configuration implements ApplicationConfiguration, UserConfiguration {
 
     final String baseURL
     final String userName

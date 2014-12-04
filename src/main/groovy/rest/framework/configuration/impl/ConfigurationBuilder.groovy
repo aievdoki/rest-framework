@@ -12,17 +12,17 @@ class ConfigurationBuilder {
     private UserConfiguration userConfiguration
     private ApplicationConfiguration applicationConfiguration
 
-    ConfigurationBuilder user(UserConfiguration userConfiguration){
+    ConfigurationBuilder user(UserConfiguration userConfiguration) {
         this.userConfiguration = userConfiguration
         this
     }
 
-    ConfigurationBuilder uri(ApplicationConfiguration applicationConfiguration){
+    ConfigurationBuilder uri(ApplicationConfiguration applicationConfiguration) {
         this.applicationConfiguration = applicationConfiguration
         this
     }
 
-    Configuration build(){
+    Configuration build() {
         new Configuration(
                 baseURL: applicationConfiguration ? applicationConfiguration.baseURL : Configuration.DEFAULT.baseURL,
                 userName: userConfiguration ? userConfiguration.userName : Configuration.DEFAULT.userName,

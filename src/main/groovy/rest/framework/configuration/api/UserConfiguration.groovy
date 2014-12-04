@@ -5,5 +5,6 @@ package rest.framework.configuration.api
  */
 interface UserConfiguration {
     String getUserName()
+
     String getPassword()
 }
